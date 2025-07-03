@@ -91,7 +91,7 @@ if(isset($message)){
         <div class="inputbox">
             <select name="user_type" >
                 <option value="user">User</option>
-                <option value="admin">Admin</option>
+                <!-- <option value="admin">Admin</option> -->
             </select>
         <i></i>
         </div>

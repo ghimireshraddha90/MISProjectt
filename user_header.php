@@ -26,16 +26,18 @@
       </nav>
 
       <div class="last_part">
+        <?php $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null; ?>
+        <?php if (!$user_id): ?>
         <div class="loginorreg">
           <p><a href="login.php">New Login</a> | <a href="register.php">Register</a></p>
         </div>
+        <?php endif; ?>
 
         <div class="icons">
           <a class="fa-solid fa-magnifying-glass" href="search_page.php"></a>
           <div class="fas fa-user" id="user_btn"></div>
 
           <?php
-          $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
           $cart_row_number = 0;
 
           if ($user_id) {
